@@ -1,9 +1,10 @@
 import axios from 'axios';
 
 const isViteDev = typeof window !== 'undefined' && window.location.port === '5173';
-const backendUrl = import.meta.env?.VITE_BACKEND_URL;
+const defaultProdBackend = 'https://futuredu-backend-production.up.railway.app';
+const backendUrl = import.meta.env?.VITE_BACKEND_URL || (isViteDev ? 'http://localhost:5000' : defaultProdBackend);
 const API = axios.create({
-  baseURL: backendUrl ? (backendUrl.endsWith('/api') ? backendUrl : `${backendUrl}/api`) : (isViteDev ? 'http://localhost:5000/api' : '/api'),
+  baseURL: backendUrl ? (backendUrl.endsWith('/api') ? backendUrl : `${backendUrl}/api`) : `${defaultProdBackend}/api`,
   headers: {
     'Content-Type': 'application/json',
     'x-admin-key': 'bilimdon-admin-secure-2026'
