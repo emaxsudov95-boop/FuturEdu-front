@@ -85,10 +85,10 @@ const Home = () => {
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
                 <Link
                   to="/quizzes"
-                  className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-700 hover:to-indigo-700 text-white font-bold text-base shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:-translate-y-0.5 transition-all"
+                  className="w-full sm:w-auto justify-center flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-700 hover:to-indigo-700 text-white font-bold text-base shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:-translate-y-0.5 transition-all"
                 >
                   <PlayCircle className="w-5 h-5" />
                   <span>Testlarni boshlash</span>
@@ -96,7 +96,7 @@ const Home = () => {
 
                 <Link
                   to="/careers"
-                  className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-base border border-slate-200/90 shadow-sm hover:shadow transition-all"
+                  className="w-full sm:w-auto justify-center flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-base border border-slate-200/90 shadow-sm hover:shadow transition-all"
                 >
                   <Compass className="w-5 h-5 text-brand-600" />
                   <span>Kasbimni tanlash</span>
@@ -104,7 +104,7 @@ const Home = () => {
 
                 <Link
                   to="/ai-tutor"
-                  className="flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-base border border-indigo-200 transition-all"
+                  className="w-full sm:w-auto justify-center flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-base border border-indigo-200 transition-all"
                 >
                   <Bot className="w-5 h-5 text-indigo-600" />
                   <span>AI Ustoz bilan chat</span>

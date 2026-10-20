@@ -62,11 +62,11 @@ const AiTeacherModal = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-40 group flex items-center gap-2.5 px-4 py-3 bg-gradient-to-r from-brand-600 via-indigo-600 to-violet-600 text-white rounded-full shadow-xl shadow-brand-500/35 hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-float"
+          className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-40 group flex items-center gap-2 px-3.5 py-2.5 sm:px-4 sm:py-3 bg-gradient-to-r from-brand-600 via-indigo-600 to-violet-600 text-white rounded-full shadow-xl shadow-brand-500/35 hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-float"
         >
           <div className="relative">
-            <span className="text-2xl animate-bounce-slow">🤖</span>
-            <span className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full border-2 border-white animate-pulse"></span>
+            <span className="text-xl sm:text-2xl animate-bounce-slow">🤖</span>
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-emerald-400 rounded-full border-2 border-white animate-pulse"></span>
           </div>
           <div className="text-left hidden sm:block">
             <span className="block text-xs font-bold leading-tight">Yoqimli AI Ustoz</span>
@@ -77,7 +77,7 @@ const AiTeacherModal = () => {
 
       {/* Floating Chat Window Modal */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-[95vw] sm:w-[420px] max-h-[620px] h-[85vh] bg-white rounded-3xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+        <div className="fixed bottom-20 right-2 sm:bottom-6 sm:right-6 z-50 w-[96vw] sm:w-[420px] max-h-[80vh] h-[75vh] sm:h-[85vh] sm:max-h-[620px] bg-white rounded-3xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
           
           {/* Header */}
           <div className="bg-gradient-to-r from-brand-600 to-indigo-600 p-4 text-white flex items-center justify-between">

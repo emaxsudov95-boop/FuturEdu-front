@@ -350,7 +350,7 @@ const CareerGuide = () => {
           </div>
 
           {/* Recommended Quizzes button */}
-          <div className="pt-4 flex items-center justify-between bg-brand-50/60 p-4 rounded-2xl border border-brand-100">
+          <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-brand-50/60 p-4 rounded-2xl border border-brand-100">
             <div>
               <h4 className="font-bold text-sm text-brand-950">
                 Ushbu kasbga mos testlarni topshirishga tayyormisiz?

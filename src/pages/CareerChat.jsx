@@ -213,7 +213,7 @@ const CareerChat = () => {
       </div>
 
       {/* Asosiy Chat Oynasi */}
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-xl flex flex-col h-[600px] overflow-hidden">
+      <div className="bg-white rounded-3xl border border-slate-200 shadow-xl flex flex-col h-[72vh] min-h-[460px] sm:h-[600px] overflow-hidden">
         
         {/* Pinned announcement if any */}
         {messages.some(m => m.isPinned) && (

@@ -58,7 +58,7 @@ const AppWrapper = () => {
       {!hideStudentChrome && <Navbar />}
 
       {/* Asosiy Marshrutlar */}
-      <main className="flex-1">
+      <main className={`flex-1 ${!hideStudentChrome ? 'pb-16 sm:pb-0' : ''}`}>
         <Routes>
           {/* O'quvchi platformasi */}
           <Route path="/" element={<Home />} />

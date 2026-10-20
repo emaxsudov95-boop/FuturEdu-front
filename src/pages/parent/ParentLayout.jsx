@@ -465,19 +465,19 @@ const ParentLayout = () => {
             )}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             
-            {/* Bola qo'shish tezkor tugmasi (Header o'ng tarafi) */}
+            {/* Bola qo'shish tezkor tugmasi (Header o'ng tarafi - Desktopda) */}
             <button
               onClick={() => {
                 setAddChildModalOpen(true);
                 setAddChildError('');
                 setAddChildSuccess('');
               }}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-950 text-emerald-300 hover:bg-emerald-900 border border-emerald-800 text-xs font-black transition-all shadow-sm"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-950 text-emerald-300 hover:bg-emerald-900 border border-emerald-800 text-xs font-black transition-all shadow-sm"
             >
               <UserPlus className="w-3.5 h-3.5 text-emerald-400" />
-              <span className="hidden sm:inline">Bola qo‘shish</span>
+              <span>Bola qo‘shish</span>
             </button>
 
             {/* Notification bell dropdown */}
@@ -633,7 +633,7 @@ const ParentLayout = () => {
         )}
 
         {/* Main Body */}
-        <main className="flex-1 p-4 sm:p-8 overflow-y-auto">
+        <main className="flex-1 p-4 sm:p-8 pb-20 md:pb-8 overflow-y-auto">
           <Outlet context={{ selectedChildId, selectedChild, children }} />
         </main>
 
@@ -756,6 +756,61 @@ const ParentLayout = () => {
           </div>
         </div>
       )}
+
+      {/* =========================================================================
+          OTA-ONALAR PANELI MOBIL PASTKI NAVIGATSIYASI (BOTTOM BAR)
+      ========================================================================= */}
+      <nav className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-slate-950/95 backdrop-blur-2xl border-t border-slate-800/90 px-1 py-1.5 flex items-center justify-around shadow-2xl">
+        <Link
+          to="/parent"
+          className={`flex flex-col items-center justify-center py-1 px-2.5 rounded-2xl transition-all ${
+            location.pathname === '/parent' ? 'text-emerald-400 font-black' : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <BarChart2 className="w-5 h-5" />
+          <span className="text-[10px] mt-0.5 font-bold">Monitoring</span>
+        </Link>
+
+        <Link
+          to="/parent/ai-advice"
+          className={`flex flex-col items-center justify-center py-1 px-2.5 rounded-2xl transition-all ${
+            location.pathname === '/parent/ai-advice' ? 'text-emerald-400 font-black' : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <Bot className="w-5 h-5" />
+          <span className="text-[10px] mt-0.5 font-bold">AI Maslahat</span>
+        </Link>
+
+        <Link
+          to="/parent/tasks"
+          className={`flex flex-col items-center justify-center py-1 px-2.5 rounded-2xl transition-all ${
+            location.pathname === '/parent/tasks' ? 'text-emerald-400 font-black' : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <CheckSquare className="w-5 h-5" />
+          <span className="text-[10px] mt-0.5 font-bold">Topshiriq</span>
+        </Link>
+
+        <Link
+          to="/parent/reports"
+          className={`flex flex-col items-center justify-center py-1 px-2.5 rounded-2xl transition-all ${
+            location.pathname === '/parent/reports' ? 'text-emerald-400 font-black' : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <FileText className="w-5 h-5" />
+          <span className="text-[10px] mt-0.5 font-bold">Hisobot</span>
+        </Link>
+
+        <Link
+          to="/parent/premium"
+          className={`flex flex-col items-center justify-center py-1 px-2.5 rounded-2xl transition-all ${
+            location.pathname === '/parent/premium' ? 'text-amber-400 font-black' : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <Crown className="w-5 h-5" />
+          <span className="text-[10px] mt-0.5 font-bold">Premium</span>
+        </Link>
+      </nav>
 
     </div>
   );

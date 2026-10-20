@@ -634,27 +634,27 @@ const BattleArena = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 space-y-6">
           
           {/* Top Duel Gauge & Scoreboard */}
-          <div className="p-4 sm:p-6 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl space-y-4">
+          <div className="p-3 sm:p-6 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl space-y-3 sm:space-y-4">
             
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-1 sm:gap-3">
               
               {/* Left: You */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-600 flex items-center justify-center text-xl sm:text-2xl shadow-md">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-2xl bg-brand-600 flex items-center justify-center text-lg sm:text-2xl shadow-md shrink-0">
                   {user?.avatar || '🧑‍🎓'}
                 </div>
                 <div>
-                  <span className="text-xs sm:text-sm font-black text-white block">Siz</span>
-                  <span className="text-base sm:text-xl font-black text-brand-400">{myTotalScore} ball</span>
+                  <span className="text-[11px] sm:text-sm font-black text-white block">Siz</span>
+                  <span className="text-xs sm:text-xl font-black text-brand-400 whitespace-nowrap">{myTotalScore} ball</span>
                 </div>
               </div>
 
               {/* Center: Round & Timer */}
-              <div className="text-center space-y-1">
-                <span className="text-[10px] font-black uppercase tracking-wider text-purple-400 block">
-                  Raund {currentRound + 1} / {questions.length}
+              <div className="text-center space-y-0.5 sm:space-y-1 shrink-0 px-1">
+                <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-purple-400 block whitespace-nowrap">
+                  Raund {currentRound + 1}/{questions.length}
                 </span>
-                <div className={`w-12 h-12 rounded-full border-2 flex items-center justify-center text-base font-black mx-auto ${
+                <div className={`w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 flex items-center justify-center text-xs sm:text-base font-black mx-auto ${
                   roundTimeLeft <= 4
                     ? 'border-rose-500 bg-rose-500/20 text-rose-400 animate-ping'
                     : 'border-amber-400 bg-amber-400/10 text-amber-300'
@@ -664,12 +664,12 @@ const BattleArena = () => {
               </div>
 
               {/* Right: Opponent */}
-              <div className="flex items-center gap-3 text-right">
+              <div className="flex items-center gap-2 sm:gap-3 text-right">
                 <div>
-                  <span className="text-xs sm:text-sm font-black text-white block">{opponent?.name || 'Raqib'}</span>
-                  <span className="text-base sm:text-xl font-black text-rose-400">{oppTotalScore} ball</span>
+                  <span className="text-[11px] sm:text-sm font-black text-white block truncate max-w-[80px] sm:max-w-none">{opponent?.name || 'Raqib'}</span>
+                  <span className="text-xs sm:text-xl font-black text-rose-400 whitespace-nowrap">{oppTotalScore} ball</span>
                 </div>
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-rose-600 flex items-center justify-center text-xl sm:text-2xl shadow-md">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-2xl bg-rose-600 flex items-center justify-center text-lg sm:text-2xl shadow-md shrink-0">
                   {opponent?.avatar || '👤'}
                 </div>
               </div>

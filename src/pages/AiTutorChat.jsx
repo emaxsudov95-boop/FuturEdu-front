@@ -128,7 +128,7 @@ const AiTutorChat = () => {
       </div>
 
       {/* Chat Container */}
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-sm flex flex-col h-[650px] overflow-hidden">
+      <div className="bg-white rounded-3xl border border-slate-200 shadow-sm flex flex-col h-[74vh] min-h-[480px] sm:h-[650px] overflow-hidden">
         
         {/* Messages Stream */}
         <div className="flex-1 p-4 sm:p-6 overflow-y-auto space-y-4 bg-slate-50/60">
